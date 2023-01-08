@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Post.Common.Events
 {
-    internal class CommentAddedEvent : BaseEvent
+    public class CommentAddedEvent : BaseEvent
     {
         public CommentAddedEvent(Guid id, int version, Guid commentId, string comment, string userName) : base(id, version, nameof(CommentAddedEvent))
         {

@@ -9,11 +9,11 @@ namespace Post.Common.Events
 {
     public class PostCreatedEvent : BaseEvent
     {
-        public PostCreatedEvent(Guid id, int version, string author, string message, DateTime datePosted) : base(id, version, nameof(PostCreatedEvent))
+        public PostCreatedEvent(Guid id, int version, string author, string message) : base(id, version, nameof(PostCreatedEvent))
         {
             Author = author;
             Message = message;
-            DatePosted = datePosted;
+            DatePosted = DateTime.Now;
         }
 
         public string Author { get;private set; }
