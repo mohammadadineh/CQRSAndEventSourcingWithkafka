@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Post.Cmd.Domain.Aggregates
 {
-    internal class PostAggregate:AggregateRoot
+    public class PostAggregate:AggregateRoot
     {
         private readonly Dictionary<Guid, Tuple<string, string>> _comments = new();
         public PostAggregate()
@@ -142,6 +142,12 @@ namespace Post.Cmd.Domain.Aggregates
         {
             Id = @event.Id;
             Active = false;
+        }
+
+
+        public void ChangeOrSetVersion(int version)
+        {
+            Version= version;
         }
     }
 
