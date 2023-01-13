@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Post.Cmd.Infrastructure.Dispatchers
 {
-    internal class CommandDispatcher : ICommandDispatcher
+    public class CommandDispatcher : ICommandDispatcher
     {
         private readonly Dictionary<Type, Func<BaseCommand, Task>> _handlers = new();
         public void RegisterHandler<T>(Func<T, Task> handler) where T : BaseCommand
@@ -22,7 +22,7 @@ namespace Post.Cmd.Infrastructure.Dispatchers
 
         public async Task SendAsync(BaseCommand command)
         {
-            if (_handlers.TryGetValue(command.GetType(), out Func<BaseCommand, Task>? handler))
+            if (_handlers.TryGetValue(command.GetType(), out Func<BaseCommand, Task> handler))
             {
                 await handler(command);
             }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Post.Cmd.Infrastructure.Handlers
 {
-    internal class EventSourcingHandler : IEventSourcingHandler<PostAggregate>
+    public class EventSourcingHandler : IEventSourcingHandler<PostAggregate>
     {
         private readonly IEventStore _eventStore;
         public EventSourcingHandler(IEventStore eventStore)

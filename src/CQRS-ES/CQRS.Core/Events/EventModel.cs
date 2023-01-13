@@ -8,7 +8,7 @@ namespace CQRS.Core.Events
 {
     public class EventModel
     {
-        public string Id { get; set; }
+        public string Id { get; set; } 
         public DateTime TimeStamp { get; set; }
         public Guid AggregateIdentifire { get; set; }
         public string AggregateType { get; set; }
