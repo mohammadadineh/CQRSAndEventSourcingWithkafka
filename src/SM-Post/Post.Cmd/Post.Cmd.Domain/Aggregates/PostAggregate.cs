@@ -25,7 +25,7 @@ namespace Post.Cmd.Domain.Aggregates
             RaiseEvent(new PostCreatedEvent(id,1,author,message));
         }
         public bool Active { get;private set; }
-        public string Author { get;private set; }
+        public string Author { get;private set; }=string.Empty;
 
         public void Apply(PostCreatedEvent @event)
         {
