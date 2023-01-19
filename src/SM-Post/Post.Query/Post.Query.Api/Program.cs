@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using Post.Query.Infrastructure;
 using Post.Query.Infrastructure.DataAccess;
 
 namespace Post.Query.Api
@@ -9,16 +10,8 @@ namespace Post.Query.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            Action<DbContextOptionsBuilder> configureDbContext = (o => o.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
-            builder.Services.AddDbContext<DataBaseContext>(configureDbContext);
-            builder.Services.AddSingleton(new DataBaseContextFactory(configureDbContext));
-            // Create database and table from code
-            var dataContext=builder.Services.BuildServiceProvider().GetRequiredService<DataBaseContext>();
 
-            var d= dataContext.Database.CanConnect();
-            
-            dataContext.Database.EnsureCreated(); 
-
+            builder.Services.AddQueryInfrastructure(builder.Configuration);
             // Add services to the container.
 
             builder.Services.AddControllers();

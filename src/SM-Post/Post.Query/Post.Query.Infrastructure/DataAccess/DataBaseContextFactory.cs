@@ -2,11 +2,11 @@
 
 namespace Post.Query.Infrastructure.DataAccess
 {
-    public class DataBaseContextFactory
+    internal class DataBaseContextFactory
     {
         private readonly Action<DbContextOptionsBuilder> _configureDbContext;
 
-        public DataBaseContextFactory(Action<DbContextOptionsBuilder> configureDbContext)
+        internal DataBaseContextFactory(Action<DbContextOptionsBuilder> configureDbContext)
         {
             _configureDbContext = configureDbContext;
         }

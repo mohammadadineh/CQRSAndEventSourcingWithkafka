@@ -11,6 +11,6 @@
         public DateTime CommentDate { get; set; }
         public string Text { get; set; }
         public bool Edited { get;private set; }
-        //public Guid PostId { get; set; }
+    //    public Guid PostId { get; set; }
     }
 }

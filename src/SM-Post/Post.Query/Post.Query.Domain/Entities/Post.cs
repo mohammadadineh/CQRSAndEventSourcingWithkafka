@@ -15,6 +15,6 @@ namespace Post.Query.Domain.Entities
         public string Message { get;private set; }
         public int Likes { get;private set; }
 
-        public virtual IEnumerable<Comment>  Comments { get;private set; }
+        public virtual ICollection<Comment>  Comments { get;private set; }
     }
 }

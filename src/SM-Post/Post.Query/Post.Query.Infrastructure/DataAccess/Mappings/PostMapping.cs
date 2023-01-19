@@ -22,10 +22,7 @@ namespace Post.Query.Infrastructure.DataAccess.Mappings
             builder.Property(p=>p.Message).HasColumnType("nvarchar(200)").IsRequired();
             builder.Property(p=>p.Likes).HasColumnType("int").IsRequired();
 
-            builder.HasOne(typeof(Comment))
-                   .WithMany()
-               //    .HasForeignKey($"{nameof(PostNamespace.Post.PostId)}");
-                   .HasForeignKey("PostId").IsRequired(false);
+
         }
     }
 }

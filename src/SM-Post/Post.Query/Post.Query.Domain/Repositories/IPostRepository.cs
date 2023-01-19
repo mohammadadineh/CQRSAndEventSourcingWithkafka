@@ -12,7 +12,7 @@ namespace Post.Query.Domain.Repositories
         Task CreateAsync(Entities.Post post);
         Task UpdateAsync(Entities.Post post);
         Task DeleteAsync(Guid postId);
-        Task<Entities.Post> GetByIdAsync(Guid postId);
+        ValueTask<Entities.Post?> GetByIdAsync(Guid postId);
         Task<IEnumerable<Entities.Post>> GetAllAsync(); 
         Task<IEnumerable<Entities.Post>> GetByAuthorAsync(string author);
         Task<IEnumerable<Entities.Post>> GetWithLikesAsync(int numberOfLikes);

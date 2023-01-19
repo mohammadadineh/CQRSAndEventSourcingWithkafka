@@ -13,21 +13,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Post.Cmd", "Post.Cmd", "{5F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Post.Query", "Post.Query", "{045D0ACA-457D-467E-B12F-FB3FCAEA1161}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Core", "src\CQRS-ES\CQRS.Core\CQRS.Core.csproj", "{71FB87F9-28DA-4F5F-8E3F-5B1844F0FD13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRS.Core", "src\CQRS-ES\CQRS.Core\CQRS.Core.csproj", "{71FB87F9-28DA-4F5F-8E3F-5B1844F0FD13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Cmd.Api", "src\SM-Post\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj", "{D8A30DC7-FD6A-4AED-9F9C-7E89332D00C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Cmd.Api", "src\SM-Post\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj", "{D8A30DC7-FD6A-4AED-9F9C-7E89332D00C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Cmd.Domain", "src\SM-Post\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj", "{4ACA3167-B2FB-4F7D-9C88-05C762044313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Cmd.Domain", "src\SM-Post\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj", "{4ACA3167-B2FB-4F7D-9C88-05C762044313}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Cmd.Infrastructure", "src\SM-Post\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj", "{59284500-1286-408E-BE5F-04B217CDD158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Cmd.Infrastructure", "src\SM-Post\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj", "{59284500-1286-408E-BE5F-04B217CDD158}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Query.Api", "src\SM-Post\Post.Query\Post.Query.Api\Post.Query.Api.csproj", "{80E81B6E-FAE1-4E41-9538-1EC97F7BA942}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Query.Api", "src\SM-Post\Post.Query\Post.Query.Api\Post.Query.Api.csproj", "{80E81B6E-FAE1-4E41-9538-1EC97F7BA942}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Query.Domain", "src\SM-Post\Post.Query\Post.Query.Domain\Post.Query.Domain.csproj", "{343DC27F-E09A-40F1-B80C-D3572B8455D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Query.Domain", "src\SM-Post\Post.Query\Post.Query.Domain\Post.Query.Domain.csproj", "{343DC27F-E09A-40F1-B80C-D3572B8455D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Query.Infrastructure", "src\SM-Post\Post.Query\Post.Query.Infrastructure\Post.Query.Infrastructure.csproj", "{A061D973-39A3-493C-AB79-AE01731D2859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Query.Infrastructure", "src\SM-Post\Post.Query\Post.Query.Infrastructure\Post.Query.Infrastructure.csproj", "{A061D973-39A3-493C-AB79-AE01731D2859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Common", "src\SM-Post\Post.Common\Post.Common.csproj", "{CCA33108-BB27-4535-B480-96115CCEE7BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Common", "src\SM-Post\Post.Common\Post.Common.csproj", "{CCA33108-BB27-4535-B480-96115CCEE7BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
