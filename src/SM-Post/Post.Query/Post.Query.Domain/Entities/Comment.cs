@@ -2,9 +2,11 @@
 {
     public class Comment
     {
-        private Comment()
+        public Comment(string userName, DateTime commentDate, string text)
         {
-
+            UserName = userName;
+            CommentDate = commentDate;
+            Text = text;
         }
         public Guid Id { get;private set; }
         public string UserName { get;private set; }

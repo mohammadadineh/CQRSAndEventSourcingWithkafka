@@ -31,7 +31,8 @@ namespace Post.Cmd.Api
             builder.Services.AddScoped<IEventSourcingHandler<PostAggregate>, EventSourcingHandler>();
             builder.Services.AddScoped<ICommandHandler, CommandHandler>();
             // register command handler methods
-            var commandHandler= builder.Services.BuildServiceProvider().GetRequiredService<ICommandHandler>();
+           
+            ICommandHandler? commandHandler = builder.Services.BuildServiceProvider().GetRequiredService<ICommandHandler>();
             var dispatcher = new CommandDispatcher();
             dispatcher.RegisterHandler<NewPostCommand>(commandHandler.HandleAsync);
             dispatcher.RegisterHandler<EditMessageCommand>(commandHandler.HandleAsync);
