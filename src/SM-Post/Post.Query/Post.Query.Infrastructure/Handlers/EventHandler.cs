@@ -42,24 +42,30 @@ namespace Post.Query.Infrastructure.Handlers
             await _postRepository.UpdateAsync(post);
         }
 
-        public Task On(CommentAddedEvent @event)
+        public async Task On(CommentAddedEvent @event)
         {
-            throw new NotImplementedException();
+            var comment = new Comment(@event.Id, @event.UserName, @event.CommentDate, @event.Text);
+            await _commentRepository.CreateAsync(comment);
         }
 
-        public Task On(CommentUpdatedEvent @event)
+        public async Task On(CommentUpdatedEvent @event)
         {
-            throw new NotImplementedException();
+            var comment=await _commentRepository.GetByIdAsync(@event.CommentId);
+            if (comment is null) return;
+
+            comment.CommentTextChange(@event.Comment, @event.EditDate);
+
+            await _commentRepository.UpdateAsync(comment);
         }
 
-        public Task On(CommentRemovedEvent @event)
+        public async Task On(CommentRemovedEvent @event)
         {
-            throw new NotImplementedException();
+            await _commentRepository.DeleteAsync(@event.CommentId);
         }
 
-        public Task On(PostRemovedEvent @event)
+        public async Task On(PostRemovedEvent @event)
         {
-            throw new NotImplementedException();
+            await _postRepository.DeleteAsync(@event.Id);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Post.Query.Infrastructure.DataAccess.Mappings
         {
             builder.ToTable($"{nameof(Comment)}s");
             builder.HasKey(p=>p.Id);
-         
+            builder.Property(p=>p.PostId);       
             builder.Property(p=>p.UserName).HasColumnType("varchar(50)").IsRequired();
             builder.Property(p=>p.CommentDate).HasColumnType("datetime").IsRequired();
             builder.Property(p=>p.Text).HasColumnType("nvarchar(200)").IsRequired();

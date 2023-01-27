@@ -87,7 +87,7 @@ namespace Post.Cmd.Domain.Aggregates
         public void Apply(CommentAddedEvent @event)
         {
             Id = @event.Id;
-            _comments.Add(@event.CommentId, new Tuple<string, string>(@event.Comment, @event.UserName));
+            _comments.Add(@event.CommentId, new Tuple<string, string>(@event.Text, @event.UserName));
         }
 
         public void EditComment(Guid commentId,string comment,string userName)

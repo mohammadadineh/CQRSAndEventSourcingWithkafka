@@ -1,7 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Post.Query.Domain.Repositories;
 using Post.Query.Infrastructure.DataAccess;
+using Post.Query.Infrastructure.Handlers;
+using Post.Query.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +20,9 @@ namespace Post.Query.Infrastructure
             Action<DbContextOptionsBuilder> configureDbContext = (o => o.UseLazyLoadingProxies().UseSqlServer(configuration.GetConnectionString("SqlServer")));
             services.AddDbContext<DataBaseContext>(configureDbContext);
             services.AddSingleton(new DataBaseContextFactory(configureDbContext));
+            services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IEventHandler,Handlers.EventHandler>();
             // Create database and table from code
             var dataContext = services.BuildServiceProvider().GetRequiredService<DataBaseContext>();
 

@@ -11,7 +11,7 @@ namespace Post.Query.Infrastructure.DataAccess
 {
     internal sealed class DataBaseContext:DbContext
     {
-        internal DataBaseContext(DbContextOptions options):base(options) 
+        public DataBaseContext(DbContextOptions options):base(options) 
         {
 
         }
