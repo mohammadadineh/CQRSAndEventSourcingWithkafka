@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Confluent.Kafka;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Post.Query.Domain.Repositories;
@@ -23,6 +24,7 @@ namespace Post.Query.Infrastructure
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<IEventHandler,Handlers.EventHandler>();
+            services.Configure<ConsumerConfig>(configuration.GetSection(nameof(ConsumerConfig)));
             // Create database and table from code
             var dataContext = services.BuildServiceProvider().GetRequiredService<DataBaseContext>();
 
