@@ -31,6 +31,7 @@ namespace Post.Query.Infrastructure
             // Create database and table from code
             var dataContext = services.BuildServiceProvider().GetRequiredService<DataBaseContext>();
 
+            services.AddHostedService<ConsumerHostedService>(); 
 
             dataContext.Database.EnsureCreated();
             return services;
