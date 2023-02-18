@@ -2,7 +2,7 @@
 
 namespace Post.Cmd.Api.Commands
 {
-    internal class NewPostCommand : BaseCommand
+    public class NewPostCommand : BaseCommand
     {
        
         internal NewPostCommand(Guid id, string author,string message) : base(id)
